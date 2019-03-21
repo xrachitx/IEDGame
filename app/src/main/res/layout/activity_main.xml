@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/test">
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="Score : 0"
+        android:textSize="18sp"
+        android:typeface="monospace"
+        app:fontFamily="sans-serif-condensed" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="684dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="39dp"
+      >
+
+        <ImageView
+            android:id="@+id/shark"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/shark" />
+
+        <ImageView
+            android:id="@+id/bigfish"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity=""
+            app:srcCompat="@drawable/bfish" />
+
+        <ImageView
+            android:id="@+id/bomb"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/bomb" />
+
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:layout_marginBottom="200dp"
+            android:lineSpacingExtra="8sp"
+            android:text="Tap to Start"
+            android:textSize="36dp"
+            android:typeface="serif"
+            app:fontFamily="sans-serif-black" />
+
+        <ImageView
+            android:id="@+id/smallfish"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/sfish" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="stopGame"
+        android:text="Pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="0dp" />
+
+</android.support.constraint.ConstraintLayout>
